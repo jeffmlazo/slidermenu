@@ -5,14 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Javascript Slider Menu Task</title>
-    <link rel="stylesheet" href="styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-      <div class="carousel-constainer">
-          <img src="images/nature1.png" alt="Nature 1">
-          <img src="images/nature2.png" alt="Nature 2">
-          <img src="images/nature3.png" alt="Nature 3">
-          <img src="images/nature4.png" alt="Nature 4">
+    <div class="carousel-box">
+      <i class="fas fa-arrow-alt-circle-left carousel-btn prev-btn"></i>
+      <div class="carousel-track-box">
+        <ul class="carousel-track">
+          <li class="carousel-slide">
+            <img src="images/nature1.png" alt="Nature 1" />
+          </li>
+          <li class="carousel-slide">
+            <img src="images/nature2.png" alt="Nature 2" />
+          </li>
+          <li class="carousel-slide">
+            <img src="images/nature3.png" alt="Nature 3" />
+          </li>
+          <li class="carousel-slide">
+            <img src="images/nature4.png" alt="Nature 4" />
+          </li>
+        </ul>
       </div>
+      <i class="fas fa-arrow-alt-circle-right carousel-btn next-btn"></i>
+
+      <div class="dot-indicator-box">
+        <button class="dot-indicator current-slide"></button>
+        <button class="dot-indicator"></button>
+        <button class="dot-indicator"></button>
+        <button class="dot-indicator"></button>
+      </div>
+    </div>
+    <script src="carouseljs.js"></script>
   </body>
 </html>
