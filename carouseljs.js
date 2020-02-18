@@ -15,28 +15,28 @@ slides.forEach(setSlidePosition);
 
 // Move slide function
 const moveToSlide = (track, currentSlide, targetSlide) => {
-  track.style.transform = "translateX(-" + targetSlide.style.left + ")";
-  currentSlide.classList.remove("current-slide");
-  targetSlide.classList.add("current-slide");
+    track.style.transform = "translateX(-" + targetSlide.style.left + ")";
+    currentSlide.classList.remove("current-slide");
+    targetSlide.classList.add("current-slide");
 };
 
 // Move dot indicator function
 const moveToDot = (currentDot, targetDot) => {
-  currentDot.classList.remove("current-slide");
-  targetDot.classList.add("current-slide");
+    currentDot.classList.remove("current-slide");
+    targetDot.classList.add("current-slide");
 };
 
 // Show or Hide arrow buttons function
 const showHideArrow = (targetIndex, prevBtn, nextBtn, slides) => {
   if (targetIndex === 0) {
-    prevBtn.classList.add("is-hidden");
-    nextBtn.classList.remove("is-hidden");
+    prevBtn.classList.add("is-disabled");
+    nextBtn.classList.remove("is-disabled");
   } else if (targetIndex === slides.length - 1) {
-    nextBtn.classList.add("is-hidden");
-    prevBtn.classList.remove("is-hidden");
+    nextBtn.classList.add("is-disabled");
+    prevBtn.classList.remove("is-disabled");
   } else {
-    nextBtn.classList.remove("is-hidden");
-    prevBtn.classList.remove("is-hidden");
+    nextBtn.classList.remove("is-disabled");
+    prevBtn.classList.remove("is-disabled");
   }
 };
 
